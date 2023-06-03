@@ -891,6 +891,11 @@ project(':core') {
     // ZooKeeperMain depends on commons-cli but declares the dependency as `provided`
     implementation libs.commonsCli
 
+    // https://mvnrepository.com/artifact/org.slf4j/slf4j-api
+    api group: 'org.slf4j', name: 'slf4j-api', version: '1.7.36'
+    // https://mvnrepository.com/artifact/org.slf4j/slf4j-log4j12
+    api group: 'org.slf4j', name: 'slf4j-log4j12', version: '1.7.36'
+
     compileOnly libs.log4j
 
     testImplementation project(':clients').sourceSets.test.output
